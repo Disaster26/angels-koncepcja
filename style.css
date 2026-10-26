@@ -57,8 +57,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
 
 /* hero */
 .hero { background: var(--niebo); min-height: calc(100svh - var(--naglowek)); display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); align-items: center; gap: 0 56px; padding: 40px max(20px, (100% - var(--szer)) / 2); }
-.hero-foto { order: 2; margin: 0; position: relative; align-self: center; width: 100%; height: calc(100svh - var(--naglowek) - 80px); min-height: 360px; max-height: 760px; border-radius: 10px; overflow: hidden; }
-.hero-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 62% 30%; }
+.hero-foto { order: 2; margin: 0 auto; position: relative; align-self: center; width: 100%; max-width: 540px; aspect-ratio: 521 / 533; height: auto; max-height: calc(100svh - var(--naglowek) - 80px); border-radius: 10px; overflow: hidden; } /* 27.10: zdjecie 521x533 - bez powiekszania ponad oryginal */
+.hero-foto img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 45% 30%; }
 .hero-in { order: 1; }
 .hero h1 { font-size: clamp(40px, 4.4vw, 58px); }
 .hero h1 span { display: block; }
@@ -179,8 +179,8 @@ a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visibl
   .marka-t b { font-size: 20px; }
   .marka-t small { font-size: 15px; }
   .hero { display: flex; flex-direction: column; align-items: stretch; padding: 0; gap: 0; }
-  .hero-foto { order: 0; flex: 1 1 0; align-self: stretch; width: 100%; height: auto; min-height: min(52vw, 24svh); max-height: 46svh; border-radius: 0; }
-  .hero-foto img { object-position: 50% 22%; }
+  .hero-foto { order: 0; flex: 1 1 0; align-self: stretch; width: 100%; max-width: none; aspect-ratio: auto; height: auto; min-height: min(52vw, 24svh); max-height: 46svh; border-radius: 0; }
+  .hero-foto img { object-position: 42% 28%; }
   .hero-foto::after { content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 36px; background: linear-gradient(to bottom, rgba(231, 239, 249, 0), var(--niebo)); }
   .hero-in { flex: 0 0 auto; padding: 4px 20px 22px; }
   .hero h1 { font-size: clamp(30px, 4.6svh, 40px); }
